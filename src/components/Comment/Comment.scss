@@ -1,0 +1,31 @@
+
+.book {
+  &__comment {
+    background: #fff;
+    box-shadow: 0 0 3px 0 #969696;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  &__text {
+    font-family: "Roboto-slab-regular", "Arial", "Callibri", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1a1b22;
+    margin: 20px 0 0 0;
+    width: 100%;
+
+    &_theme_gray {
+      color: #b6bcbf;
+    }
+
+    &_type_comment {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin: 0;
+    }
+  }
+}

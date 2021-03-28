@@ -1,0 +1,128 @@
+.card {
+  width: 400px;
+  height: 576px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px 16px 0 0;
+
+  @media screen and (max-width: 1439px) {
+    width: 224px;
+    height: 400px;
+    margin: 8px 8px 0 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 10px auto 0 auto;
+    width: 288px;
+    height: 440px;
+  }
+
+  &:nth-of-type(3n) {
+    margin: 16px 0 0 0;
+
+    @media screen and (max-width: 1439px) {
+      margin: 8px 0 0 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 272px;
+    object-fit: cover;
+
+    @media screen and (max-width: 1439px) {
+      height: 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 196px;
+    }
+  }
+
+  &__author {
+    font-family: 'Source-sans-pro-regular', 'Arial', 'Callibri', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    margin: 20px 0 0 24px;
+
+    @media screen and (max-width: 1439px) {
+      margin: 16px 0 0 16px;
+    }
+  }
+
+  &__title {
+    font-family: 'Roboto-slab-regular', 'Arial', 'Callibri', serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    max-width: 352px;
+    margin: 12px auto 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    @media screen and (max-width: 1439px) {
+      font-size: 22px;
+      line-height: 24px;
+      max-width: 192px;
+      -webkit-line-clamp: 3;
+    }
+
+    @media screen and (max-width: 767px) {
+      line-height: 26px;
+      max-width: 256px;
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Roboto-slab-regular', 'Arial', 'Callibri', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 352px;
+    margin: 16px auto 0 auto;
+
+    @media screen and (max-width: 1439px) {
+      margin: 10px auto 0 auto;
+      max-width: 192px;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 256px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__rating {
+    max-width: 352px;
+    margin: 16px auto 0 auto;
+
+    @media screen and (max-width: 1439px) {
+      margin: 12px 0 0 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 8px 0 0 16px;
+    }
+  }
+}
