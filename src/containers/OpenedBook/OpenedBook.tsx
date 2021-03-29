@@ -11,7 +11,10 @@ import {
   useDispatch,
   useSelector
 } from 'react-redux';
-import { setBooksActionCreator, setBooksToShowActionCreator } from '../../store/actions/booksActionCreators';
+import {
+  setBooksActionCreator,
+  setBooksToShowActionCreator
+} from '../../store/actions/booksActionCreators';
 import { RootState } from '../../store/reducers/rootReducer';
 import { setCorrectDate } from '../../utils/helpers';
 import Comment from '../../components/Comment/Comment';
