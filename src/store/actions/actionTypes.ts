@@ -1,3 +1,4 @@
+export const SET_BOOKS = 'SET_BOOKS';
 export const SET_BOOKS_TO_SHOW = 'SET_BOOKS_TO_SHOW';
 export const SET_BOOK_GENRE = 'SET_BOOK_GENRE';
 

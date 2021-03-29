@@ -87,12 +87,14 @@ export type componentsVisibilityAction = {
 };
 
 export type BooksState = {
+  books: Array<Book>;
   booksToShow: Array<Book>;
   bookGenre: string;
 };
 
 export type BooksAction = {
   type: string;
+  books?: Array<Book>;
   booksToShow?: Array<Book>;
   bookGenre?: string;
 };

@@ -3,7 +3,6 @@ import './Filters.scss';
 import Select from 'react-select';
 import Button from '../UI/Button/Button';
 import { setOptions } from '../../utils/helpers';
-import { books } from '../../utils/constants';
 import { RootState } from '../../store/reducers/rootReducer';
 import {
   useSelector,
@@ -19,6 +18,7 @@ import {
 const Filters: React.FC = () => {
   const dispatch = useDispatch();
   const booksToShow: Array<Book> = useSelector((state: RootState) => state.books.booksToShow);
+  const books: Array<Book> = useSelector((state: RootState) => state.books.books);
 
   // формирование option для select
   const authorsOptionsArray: Array<Option> = setOptions(books, 'author');

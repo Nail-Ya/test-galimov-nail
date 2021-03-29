@@ -164,7 +164,7 @@ export const books: Array<Book> = [
   {
     id: 6,
     pathName: 'kuleshov-interesting-book-4',
-    imageLink: 'https://lh4.googleusercontent.com/JF5ll5h92znpF3dMZZM7oImhi9j_OH1LCT9on-zozUX0jXsU3wICu0LpvAbHCn0sro1szi2RXim5DPuqDUie7d1sJ0tJRVHefO97NwA4C_Ha06HBScmZtE3GuW2Im8MJvSF_zJdh',
+    imageLink: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     author: 'Kuleshov Ignat',
     name: 'Interesting book 4',
     publishingYear: '2012',
@@ -196,7 +196,7 @@ export const books: Array<Book> = [
   {
     id: 7,
     pathName: 'sokolov-interesting-book-5',
-    imageLink: 'https://lh3.googleusercontent.com/proxy/qvKMZBf_cLBEyK_Hi_EFmp-eC1pTlPoJvGzqudsZ4CGKgkVu19Q6z6LuXDpVocQdrxfRnztaJ2q06W_EIbfjQJM6w49lXmGC7jJXCfU',
+    imageLink: 'https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     author: 'Sokolov Alex',
     name: 'Interesting book 5',
     publishingYear: '2008',
@@ -228,7 +228,7 @@ export const books: Array<Book> = [
   {
     id: 8,
     pathName: 'kuznetsov-interesting-book-6',
-    imageLink: 'https://lh3.googleusercontent.com/proxy/pPooQqGIaJNNwp5Ch2snlav8Y8CJXnVKjxHwsxJjlG2DDiurkRuRPsPqOUodOOCOMj-TlQrCmnP5Cv6o5NvAkmjElDxWcy5DIz4fftdIAcWdDBBM7C7lvDmP9rq6BnhcCg',
+    imageLink: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     author: 'Kuznetsov Vitaly',
     name: 'Interesting book 6',
     publishingYear: '2015',
@@ -260,7 +260,7 @@ export const books: Array<Book> = [
   {
     id: 9,
     pathName: 'smirnov-interesting-book-7',
-    imageLink: 'https://lh3.googleusercontent.com/proxy/VWIWvZDlsu3XAaLI9cvW-P3dJb36r0tp3wEkVW5U7uP3omkDCKbGSVhY9eEv6kXSvV_WFuuE__ZXhoYoMtTParATqT0w33H0KW_rGZ7t8OoX2QIvAYfr',
+    imageLink: 'https://images.unsplash.com/photo-1589998059171-988d887df646?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     author: 'Smirnov Ivan',
     name: 'Interesting book 7',
     publishingYear: '2020',

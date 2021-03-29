@@ -11,7 +11,7 @@ import {
   useDispatch,
   useSelector
 } from 'react-redux';
-import { setBooksToShowActionCreator } from '../../store/actions/booksActionCreators';
+import { setBooksActionCreator, setBooksToShowActionCreator } from '../../store/actions/booksActionCreators';
 import { RootState } from '../../store/reducers/rootReducer';
 import { setCorrectDate } from '../../utils/helpers';
 import Comment from '../../components/Comment/Comment';
@@ -42,6 +42,7 @@ const OpenedBook: React.FC = () => {
       return item.id === updatedBook.id ? updatedBook : item;
     });
     dispatch(setBooksToShowActionCreator(updatedBooks));
+    dispatch(setBooksActionCreator(updatedBooks));
   };
   const [isEditBookInfoPopupOpened, setIsEditBookInfoPopupOpened] = React.useState<boolean>(false);
 
@@ -102,7 +103,7 @@ const OpenedBook: React.FC = () => {
         <h1 className="book__name">{openedBook!.name}</h1>
         <img
           src={openedBook!.imageLink}
-          alt="Картинка аниги"
+          alt="Картинка книги"
           className="book__image"
         />
         <p className="book__text">
