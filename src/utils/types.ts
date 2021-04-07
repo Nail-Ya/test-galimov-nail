@@ -97,4 +97,8 @@ export type BooksAction = {
   books?: Array<Book>;
   booksToShow?: Array<Book>;
   bookGenre?: string;
+  author?: string;
+  name?: string;
+  selectedRatingOption?: string;
+  updatedBook?: Book;
 };

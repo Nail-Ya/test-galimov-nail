@@ -7,7 +7,12 @@ import {
   useSelector,
   useDispatch
 } from 'react-redux';
-import { setBooksToShowActionCreator } from '../../store/actions/booksActionCreators';
+import {
+  filterBooksByAuthorActionCreator,
+  filterBooksByNameActionCreator,
+  filterBooksByRatingActionCreator,
+  setBooksToShowActionCreator
+} from '../../store/actions/booksActionCreators';
 import { setIsPreloaderShowActionCreator } from '../../store/actions/componentsVisibilityActionCreators';
 import {
   Book,
@@ -17,7 +22,6 @@ import Select from '../UI/Select/Select';
 
 const Filters: React.FC = () => {
   const dispatch = useDispatch();
-  const booksToShow: Array<Book> = useSelector((state: RootState) => state.books.booksToShow);
   const books: Array<Book> = useSelector((state: RootState) => state.books.books);
 
   // формирование option для select
@@ -43,18 +47,9 @@ const Filters: React.FC = () => {
     }, 500);
   };
 
-  // функция поиска по автору
-  const searchBooksByAuthor = (author: string): void => {
-    const updatedBooksToShow: Array<Book> = booksToShow.filter((item: Book) => {
-      return item.author.trim().toLowerCase().includes(author.trim().toLowerCase());
-    });
-    dispatch(setBooksToShowActionCreator(updatedBooksToShow));
-  };
-
   React.useEffect(() => {
-    searchBooksByAuthor(selectedBookAuthor);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedBookAuthor]);
+    dispatch(filterBooksByAuthorActionCreator(selectedBookAuthor));
+  }, [dispatch, selectedBookAuthor]);
 
 
   // сортировка по названию книги //
@@ -71,18 +66,9 @@ const Filters: React.FC = () => {
     }, 500);
   };
 
-  // функция поиска по названию книги
-  const searchBooksByName = (name: string): void => {
-    const updatedBooksToShow: Array<Book> = booksToShow.filter((item: Book) => {
-      return item.name.trim().toLowerCase().includes(name.trim().toLowerCase());
-    });
-    dispatch(setBooksToShowActionCreator(updatedBooksToShow));
-  };
-
   React.useEffect(() => {
-    searchBooksByName(selectedBookName);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedBookName]);
+    dispatch(filterBooksByNameActionCreator(selectedBookName));
+  }, [dispatch, selectedBookName]);
 
 
   // сортировка по рейтингу книги //
@@ -99,25 +85,9 @@ const Filters: React.FC = () => {
     }, 500);
   };
 
-  // функция поиска по рейтингу
-  const searchBooksByRating = (selectedRatingOption: string): void => {
-    if (selectedRatingOption === 'Сначала с низким рейтингом') {
-      const updatedBooksToShow: Array<Book> = booksToShow.sort((a: Book, b: Book) => {
-        return a.averageRating - b.averageRating;
-      });
-      dispatch(setBooksToShowActionCreator(updatedBooksToShow));
-    } else if (selectedRatingOption === 'Сначала с высоким рейтингом') {
-      const updatedBooksToShow: Array<Book> = booksToShow.sort((a: Book, b: Book) => {
-        return b.averageRating - a.averageRating;
-      });
-      dispatch(setBooksToShowActionCreator(updatedBooksToShow));
-    };
-  };
-
   React.useEffect(() => {
-    searchBooksByRating(selectedRatingOption);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedRatingOption]);
+    dispatch(filterBooksByRatingActionCreator(selectedRatingOption));
+  }, [dispatch, selectedRatingOption]);
 
 
   // поиск по названию книги //
@@ -133,7 +103,7 @@ const Filters: React.FC = () => {
   const handleFormSubmit = (evt: React.FormEvent<HTMLFormElement>): void => {
     dispatch(setIsPreloaderShowActionCreator(true));
     evt.preventDefault();
-    searchBooksByName(inputValue);
+    dispatch(filterBooksByNameActionCreator(inputValue));
     // задержка для имитации запроса на backend
     setTimeout(() => {
       dispatch(setIsPreloaderShowActionCreator(false));
@@ -143,13 +113,12 @@ const Filters: React.FC = () => {
   // живой поиск при вводе в input
   React.useEffect(() => {
     dispatch(setIsPreloaderShowActionCreator(true));
-    searchBooksByName(inputValue);
+    dispatch(filterBooksByNameActionCreator(inputValue));
     // задержка для имитации запроса на backend
     setTimeout(() => {
       dispatch(setIsPreloaderShowActionCreator(false));
     }, 500);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inputValue]);
+  }, [dispatch, inputValue]);
 
   return (
     <>
