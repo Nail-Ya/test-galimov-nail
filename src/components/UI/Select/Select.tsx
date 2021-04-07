@@ -36,10 +36,6 @@ const Select: React.FC<Props> = ({
     'select__icon_opened': isSelectOpened
   });
 
-  const backdropClassName: string = classnames('select__backdrop', {
-    'select__backdrop_opened': isSelectOpened
-  });
-
   const handleOptionClick = (selectedOption: SelectOption): void => {
     onChange(selectedOption);
     setIsSelectOpened(false);
@@ -48,11 +44,6 @@ const Select: React.FC<Props> = ({
 
   return (
     <div className={selectClassName}>
-      <div
-        className={backdropClassName}
-        onClick={() => setIsSelectOpened(false)}
-      >
-      </div>
       <div className="select__container">
         <div
           className="select__input"
