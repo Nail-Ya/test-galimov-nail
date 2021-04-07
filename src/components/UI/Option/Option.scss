@@ -1,0 +1,18 @@
+.select__item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+
+  & span {
+    font-family: 'Roboto-regular', 'Arial', 'Callibri', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+  }
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+    transition: .15s background-color ease-in;
+  }
+}

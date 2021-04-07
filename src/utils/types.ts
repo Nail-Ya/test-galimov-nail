@@ -19,9 +19,9 @@ export interface Commentary {
   userName: string;
 };
 
-export interface Option {
-  label: string;
+export interface SelectOption {
   value: string;
+  id: number;
 };
 
 export interface User {

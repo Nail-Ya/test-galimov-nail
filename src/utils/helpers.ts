@@ -1,18 +1,18 @@
 import {
   Book,
   DateTimeFormatOptions,
-  Option
+  SelectOption
 } from "./types";
 
 // формирование option для select
-export const setOptions = (array: Array<Book>, optionName: string): Array<Option> => {
+export const setOptions = (array: Array<Book>, optionName: string): Array<SelectOption> => {
   const optionNamesArray: Array<string> = array.map((item: any) => item[optionName]);
   const arrayWithoutRepeat: Array<string> = Array.from(new Set(optionNamesArray));
-  const optionsArray: Array<Option> = [];
+  const optionsArray: Array<SelectOption> = [];
   arrayWithoutRepeat.forEach((item: string) => {
     const option: any = {};
     option.value = item;
-    option.label = item;
+    option.id = Math.random();
     optionsArray.push(option);
   });
   return optionsArray;

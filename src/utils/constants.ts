@@ -100,7 +100,7 @@ export const books: Array<Book> = [
   {
     id: 4,
     pathName: 'denisov-interesting-book-4',
-    imageLink: 'https://r5.readrate.com/img/pictures/basic/752/752781/7527813/w585h345-crop-stretch-02d11873.jpg',
+    imageLink: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     author: 'Denisov Ivan',
     name: 'Interesting book 4',
     publishingYear: '2014',
